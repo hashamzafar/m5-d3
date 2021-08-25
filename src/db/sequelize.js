@@ -1,4 +1,4 @@
-import { Sequelize } from sequelize
+import { Sequelize } from "sequelize"
 
 const { PGPORT, PGDATABASE, PGUSERNAME, PGPASSWORD, PGHOST } = process.env
 const sequelize = new Sequelize(PGDATABASE, PGUSERNAME, PGPASSWORD, {
