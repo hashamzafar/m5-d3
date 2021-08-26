@@ -1,9 +1,11 @@
 import { Sequelize } from "sequelize"
 
 const { PGPORT, PGDATABASE, PGUSERNAME, PGPASSWORD, PGHOST } = process.env
+
 const sequelize = new Sequelize(PGDATABASE, PGUSERNAME, PGPASSWORD, {
     host: PGHOST,
-    dialect: "postgre"
+    port: PGPORT,
+    dialect: "postgres",
 
 })
 
